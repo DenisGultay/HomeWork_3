@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Entityes.CompanyEntity" table="company" schema="homework1">
+        <id name="companyId">
+            <column name="company_id" sql-type="int(11)"/>
+        </id>
+        <property name="companyName">
+            <column name="company_name" sql-type="varchar(45)" length="45"/>
+        </property>
+        <set name="personsByCompanyId" inverse="true">
+            <key>
+                <column name="company_id" not-null="true"/>
+            </key>
+            <one-to-many not-found="ignore" class="Entityes.PersonsEntity"/>
+        </set>
+        <set name="projectsByCompanyId" inverse="true">
+            <key>
+                <column name="company_id"/>
+            </key>
+            <one-to-many not-found="ignore" class="Entityes.ProjectsEntity"/>
+        </set>
+    </class>
+</hibernate-mapping>

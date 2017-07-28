@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Entityes.PersonsSkillsEntity" table="persons_skills" schema="homework1">
+        <property name="personsId">
+            <column name="persons_id" sql-type="int(11)"/>
+        </property>
+        <property name="skillsId">
+            <column name="skills_id" sql-type="int(11)"/>
+        </property>
+        <many-to-one name="personsByPersonsId" class="Entityes.PersonsEntity">
+            <column name="persons_id"/>
+        </many-to-one>
+        <many-to-one name="skillsBySkillsId" class="Entityes.SkillsEntity">
+            <column name="skills_id"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

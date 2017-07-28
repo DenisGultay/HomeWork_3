@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:mysql://localhost:3306/homework1</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password"></property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <mapping resource="CompanyEntity.hbm.xml"/>
+        <mapping class="Entityes.CompanyEntity"/>
+        <mapping resource="CustomersEntity.hbm.xml"/>
+        <mapping class="Entityes.CustomersEntity"/>
+        <mapping resource="PersonsEntity.hbm.xml"/>
+        <mapping class="Entityes.PersonsEntity"/>
+        <mapping resource="PersonsProjectsEntity.hbm.xml"/>
+        <mapping class="Entityes.PersonsProjectsEntity"/>
+        <mapping resource="PersonsSkillsEntity.hbm.xml"/>
+        <mapping class="Entityes.PersonsSkillsEntity"/>
+        <mapping class="Entityes.ProjectsEntity"/>
+        <mapping resource="ProjectsEntity.hbm.xml"/>
+        <mapping resource="SkillsEntity.hbm.xml"/>
+        <mapping class="Entityes.SkillsEntity"/>
+        <!-- <property name="connection.username"/> -->
+        <!-- <property name="connection.password"/> -->
+
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>

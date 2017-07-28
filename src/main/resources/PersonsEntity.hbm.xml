@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Entityes.PersonsEntity" table="persons" schema="homework1">
+        <id name="personsId">
+            <column name="persons_id" sql-type="int(11)"/>
+        </id>
+        <property name="personsName">
+            <column name="persons_name" sql-type="varchar(45)" length="45"/>
+        </property>
+        <property name="personsAge">
+            <column name="persons_age" sql-type="int(11)"/>
+        </property>
+        <property name="companyId">
+            <column name="company_id" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="salary">
+            <column name="salary" sql-type="int(11)" not-null="true"/>
+        </property>
+        <many-to-one name="companyByCompanyId" class="Entityes.CompanyEntity">
+            <column name="company_id" not-null="true"/>
+        </many-to-one>
+        <set name="personsProjectsByPersonsId" inverse="true">
+            <key>
+                <column name="persons_id"/>
+            </key>
+            <one-to-many not-found="ignore" class="Entityes.PersonsProjectsEntity"/>
+        </set>
+        <set name="personsSkillsByPersonsId" inverse="true">
+            <key>
+                <column name="persons_id"/>
+            </key>
+            <one-to-many not-found="ignore" class="Entityes.PersonsSkillsEntity"/>
+        </set>
+    </class>
+</hibernate-mapping>
