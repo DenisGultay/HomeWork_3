@@ -20,7 +20,7 @@
         <property name="salary">
             <column name="salary" sql-type="int(11)" not-null="true"/>
         </property>
-        <many-to-one name="companyByCompanyId" class="Entityes.CompanyEntity">
+        <many-to-one name="companyByCompanyId" class="Entityes.Company">
             <column name="company_id" not-null="true"/>
         </many-to-one>
         <set name="personsProjectsByPersonsId" inverse="true">

@@ -14,7 +14,7 @@ public class PersonsEntity {
     private int personsAge;
     private Integer companyId;
     private Integer salary;
-    private CompanyEntity companyByCompanyId;
+    private Company companyByCompanyId;
     private Collection<PersonsProjectsEntity> personsProjectsByPersonsId;
     private Collection<PersonsSkillsEntity> personsSkillsByPersonsId;
 
@@ -96,11 +96,11 @@ public class PersonsEntity {
 
     @ManyToOne
     @JoinColumn(name = "company_id", referencedColumnName = "company_id")
-    public CompanyEntity getCompanyByCompanyId() {
+    public Company getCompanyByCompanyId() {
         return companyByCompanyId;
     }
 
-    public void setCompanyByCompanyId(CompanyEntity companyByCompanyId) {
+    public void setCompanyByCompanyId(Company companyByCompanyId) {
         this.companyByCompanyId = companyByCompanyId;
     }
 

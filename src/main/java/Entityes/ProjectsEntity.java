@@ -15,7 +15,7 @@ public class ProjectsEntity {
     private int customersId;
     private Integer projectsCost;
     private Collection<PersonsProjectsEntity> personsProjectsByProjectsId;
-    private CompanyEntity companyByCompanyId;
+    private Company companyByCompanyId;
 
     @Id
     @Column(name = "projects_id", nullable = false)
@@ -104,11 +104,11 @@ public class ProjectsEntity {
 
     @ManyToOne
     @JoinColumn(name = "company_id", referencedColumnName = "company_id", nullable = false)
-    public CompanyEntity getCompanyByCompanyId() {
+    public Company getCompanyByCompanyId() {
         return companyByCompanyId;
     }
 
-    public void setCompanyByCompanyId(CompanyEntity companyByCompanyId) {
+    public void setCompanyByCompanyId(Company companyByCompanyId) {
         this.companyByCompanyId = companyByCompanyId;
     }
 }

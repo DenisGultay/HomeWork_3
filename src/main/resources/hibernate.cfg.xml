@@ -9,7 +9,7 @@
         <property name="connection.password"></property>
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
         <mapping resource="CompanyEntity.hbm.xml"/>
-        <mapping class="Entityes.CompanyEntity"/>
+        <mapping class="Entityes.Company"/>
         <mapping resource="CustomersEntity.hbm.xml"/>
         <mapping class="Entityes.CustomersEntity"/>
         <mapping resource="PersonsEntity.hbm.xml"/>
