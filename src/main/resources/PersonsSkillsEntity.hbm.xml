@@ -11,10 +11,10 @@
         <property name="skillsId">
             <column name="skills_id" sql-type="int(11)"/>
         </property>
-        <many-to-one name="personsByPersonsId" class="Entityes.PersonsEntity">
+        <many-to-one name="personsByPersonsId" class="Entityes.Persons">
             <column name="persons_id"/>
         </many-to-one>
-        <many-to-one name="skillsBySkillsId" class="Entityes.SkillsEntity">
+        <many-to-one name="skillsBySkillsId" class="Entityes.Skills">
             <column name="skills_id"/>
         </many-to-one>
     </class>

@@ -15,13 +15,13 @@
             <key>
                 <column name="company_id" not-null="true"/>
             </key>
-            <one-to-many not-found="ignore" class="Entityes.PersonsEntity"/>
+            <one-to-many not-found="ignore" class="Entityes.Persons"/>
         </set>
         <set name="projectsByCompanyId" inverse="true">
             <key>
                 <column name="company_id"/>
             </key>
-            <one-to-many not-found="ignore" class="Entityes.ProjectsEntity"/>
+            <one-to-many not-found="ignore" class="Entityes.Projects"/>
         </set>
     </class>
 </hibernate-mapping>

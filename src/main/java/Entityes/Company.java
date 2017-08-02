@@ -11,8 +11,8 @@ import java.util.Collection;
 public class Company {
     private int companyId;
     private String companyName;
-    private Collection<PersonsEntity> personsByCompanyId;
-    private Collection<ProjectsEntity> projectsByCompanyId;
+    private Collection<Persons> personsByCompanyId;
+    private Collection<Projects> projectsByCompanyId;
 
     @Id
     @Column(name = "company_id", nullable = false)
@@ -55,20 +55,20 @@ public class Company {
     }
 
     @OneToMany(mappedBy = "companyByCompanyId")
-    public Collection<PersonsEntity> getPersonsByCompanyId() {
+    public Collection<Persons> getPersonsByCompanyId() {
         return personsByCompanyId;
     }
 
-    public void setPersonsByCompanyId(Collection<PersonsEntity> personsByCompanyId) {
+    public void setPersonsByCompanyId(Collection<Persons> personsByCompanyId) {
         this.personsByCompanyId = personsByCompanyId;
     }
 
     @OneToMany(mappedBy = "companyByCompanyId")
-    public Collection<ProjectsEntity> getProjectsByCompanyId() {
+    public Collection<Projects> getProjectsByCompanyId() {
         return projectsByCompanyId;
     }
 
-    public void setProjectsByCompanyId(Collection<ProjectsEntity> projectsByCompanyId) {
+    public void setProjectsByCompanyId(Collection<Projects> projectsByCompanyId) {
         this.projectsByCompanyId = projectsByCompanyId;
     }
 }

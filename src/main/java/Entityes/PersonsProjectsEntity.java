@@ -10,8 +10,8 @@ import javax.persistence.*;
 public class PersonsProjectsEntity {
     private int personsId;
     private int projectsId;
-    private PersonsEntity personsByPersonsId;
-    private ProjectsEntity projectsByProjectsId;
+    private Persons personsByPersonsId;
+    private Projects projectsByProjectsId;
 
     @Basic
     @Column(name = "persons_id", nullable = false)
@@ -55,21 +55,21 @@ public class PersonsProjectsEntity {
 
     @ManyToOne
     @JoinColumn(name = "persons_id", referencedColumnName = "persons_id", nullable = false)
-    public PersonsEntity getPersonsByPersonsId() {
+    public Persons getPersonsByPersonsId() {
         return personsByPersonsId;
     }
 
-    public void setPersonsByPersonsId(PersonsEntity personsByPersonsId) {
+    public void setPersonsByPersonsId(Persons personsByPersonsId) {
         this.personsByPersonsId = personsByPersonsId;
     }
 
     @ManyToOne
     @JoinColumn(name = "projects_id", referencedColumnName = "projects_id", nullable = false)
-    public ProjectsEntity getProjectsByProjectsId() {
+    public Projects getProjectsByProjectsId() {
         return projectsByProjectsId;
     }
 
-    public void setProjectsByProjectsId(ProjectsEntity projectsByProjectsId) {
+    public void setProjectsByProjectsId(Projects projectsByProjectsId) {
         this.projectsByProjectsId = projectsByProjectsId;
     }
 }

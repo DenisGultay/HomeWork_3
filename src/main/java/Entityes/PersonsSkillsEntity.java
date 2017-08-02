@@ -10,8 +10,8 @@ import javax.persistence.*;
 public class PersonsSkillsEntity {
     private int personsId;
     private int skillsId;
-    private PersonsEntity personsByPersonsId;
-    private SkillsEntity skillsBySkillsId;
+    private Persons personsByPersonsId;
+    private Skills skillsBySkillsId;
 
     @Basic
     @Column(name = "persons_id", nullable = false)
@@ -55,21 +55,21 @@ public class PersonsSkillsEntity {
 
     @ManyToOne
     @JoinColumn(name = "persons_id", referencedColumnName = "persons_id", nullable = false)
-    public PersonsEntity getPersonsByPersonsId() {
+    public Persons getPersonsByPersonsId() {
         return personsByPersonsId;
     }
 
-    public void setPersonsByPersonsId(PersonsEntity personsByPersonsId) {
+    public void setPersonsByPersonsId(Persons personsByPersonsId) {
         this.personsByPersonsId = personsByPersonsId;
     }
 
     @ManyToOne
     @JoinColumn(name = "skills_id", referencedColumnName = "skills_id", nullable = false)
-    public SkillsEntity getSkillsBySkillsId() {
+    public Skills getSkillsBySkillsId() {
         return skillsBySkillsId;
     }
 
-    public void setSkillsBySkillsId(SkillsEntity skillsBySkillsId) {
+    public void setSkillsBySkillsId(Skills skillsBySkillsId) {
         this.skillsBySkillsId = skillsBySkillsId;
     }
 }

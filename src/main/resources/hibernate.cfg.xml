@@ -11,17 +11,17 @@
         <mapping resource="CompanyEntity.hbm.xml"/>
         <mapping class="Entityes.Company"/>
         <mapping resource="CustomersEntity.hbm.xml"/>
-        <mapping class="Entityes.CustomersEntity"/>
+        <mapping class="Entityes.Customers"/>
         <mapping resource="PersonsEntity.hbm.xml"/>
-        <mapping class="Entityes.PersonsEntity"/>
+        <mapping class="Entityes.Persons"/>
         <mapping resource="PersonsProjectsEntity.hbm.xml"/>
         <mapping class="Entityes.PersonsProjectsEntity"/>
         <mapping resource="PersonsSkillsEntity.hbm.xml"/>
         <mapping class="Entityes.PersonsSkillsEntity"/>
-        <mapping class="Entityes.ProjectsEntity"/>
+        <mapping class="Entityes.Projects"/>
         <mapping resource="ProjectsEntity.hbm.xml"/>
         <mapping resource="SkillsEntity.hbm.xml"/>
-        <mapping class="Entityes.SkillsEntity"/>
+        <mapping class="Entityes.Skills"/>
         <!-- <property name="connection.username"/> -->
         <!-- <property name="connection.password"/> -->
 

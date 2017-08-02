@@ -8,7 +8,7 @@ import java.util.Collection;
  */
 @Entity
 @Table(name = "persons", schema = "homework1", catalog = "")
-public class PersonsEntity {
+public class Persons {
     private int personsId;
     private String personsName;
     private int personsAge;
@@ -73,7 +73,7 @@ public class PersonsEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        PersonsEntity that = (PersonsEntity) o;
+        Persons that = (Persons) o;
 
         if (personsId != that.personsId) return false;
         if (personsAge != that.personsAge) return false;
