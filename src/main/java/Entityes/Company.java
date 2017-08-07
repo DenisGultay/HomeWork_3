@@ -14,6 +14,10 @@ public class Company {
     private Collection<Persons> personsByCompanyId;
     private Collection<Projects> projectsByCompanyId;
 
+    public Company(String company) {
+
+    }
+
     @Id
     @Column(name = "company_id", nullable = false)
     public int getCompanyId() {

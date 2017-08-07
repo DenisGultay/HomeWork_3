@@ -8,24 +8,24 @@
         <property name="connection.username">root</property>
         <property name="connection.password"></property>
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-        <mapping resource="CompanyEntity.hbm.xml"/>
-        <mapping class="Entityes.Company"/>
-        <mapping resource="CustomersEntity.hbm.xml"/>
-        <mapping class="Entityes.Customers"/>
-        <mapping resource="PersonsEntity.hbm.xml"/>
-        <mapping class="Entityes.Persons"/>
-        <mapping resource="PersonsProjectsEntity.hbm.xml"/>
-        <mapping class="Entityes.PersonsProjectsEntity"/>
-        <mapping resource="PersonsSkillsEntity.hbm.xml"/>
-        <mapping class="Entityes.PersonsSkillsEntity"/>
-        <mapping class="Entityes.Projects"/>
-        <mapping resource="ProjectsEntity.hbm.xml"/>
-        <mapping resource="SkillsEntity.hbm.xml"/>
-        <mapping class="Entityes.Skills"/>
+        <property name="hbm2ddl.auto">update</property>
+        <mapping resource="CompanyEntity.hbm.xml"></mapping>
+        <mapping class="Entityes.Company"></mapping>
+        <mapping resource="CustomersEntity.hbm.xml"></mapping>
+        <mapping class="Entityes.Customers"></mapping>
+        <mapping resource="PersonsEntity.hbm.xml"></mapping>
+        <mapping class="Entityes.Persons"></mapping>
+        <mapping resource="PersonsProjectsEntity.hbm.xml"></mapping>
+        <mapping class="Entityes.PersonsProjectsEntity"></mapping>
+        <mapping resource="PersonsSkillsEntity.hbm.xml"></mapping>
+        <mapping class="Entityes.PersonsSkillsEntity"></mapping>
+        <mapping class="Entityes.Projects"></mapping>
+        <mapping resource="ProjectsEntity.hbm.xml"></mapping>
+        <mapping resource="SkillsEntity.hbm.xml"></mapping>
+        <mapping class="Entityes.Skills"></mapping>
         <!-- <property name="connection.username"/> -->
         <!-- <property name="connection.password"/> -->
 
         <!-- DB schema will be updated if needed -->
-        <!-- <property name="hbm2ddl.auto">update</property> -->
     </session-factory>
 </hibernate-configuration>
